@@ -23,13 +23,15 @@
             android:layout_height="wrap_content"
             android:hint="Enter your email"
             android:id = "@+id/editTextEmail"/>
+
         <EditText
-            android:layout_margin="15dp"
-            android:inputType="textPassword"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:hint="Enter your password"
-            android:id = "@+id/editTextPassword"/>
+            android:inputType="textPassword" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

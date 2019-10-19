@@ -6,28 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.myapplication.data.User;
 
-import org.w3c.dom.Text;
+import java.io.Serializable;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button logout;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        logout.setOnClickListener(this);
+        user = (User) getIntent().getSerializableExtra("user");
+
     }
 
-    public void onClick(View view){
-        if(view == logout){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
-        }
+    @Override
+    public void onClick(View v) {
+
     }
 }

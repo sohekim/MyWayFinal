@@ -1,30 +1,35 @@
 package com.example.myapplication.data;
 
 
+import com.google.firebase.firestore.DocumentReference;
+
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class User {
+public class User implements Serializable{
 
     private String uid;
     private String name;
     private String major;
-    private ArrayList<String> courses;
+    private DocumentReference courses;
     private boolean studyAbroad;
     private String abroadCountry;
-    private ArrayList<String> internship;
-    private ArrayList<String> clubs;
+    private DocumentReference internship;
+    private DocumentReference clubs;
 
     public User(
             String uid,
             String name,
             String major,
-            ArrayList<String> courses,
+            DocumentReference courses,
             boolean studyAbroad,
             String abroadCountry,
-            ArrayList<String> internship,
-            ArrayList<String> clubs
-    ){
+            DocumentReference internship,
+            DocumentReference clubs
+    )
+
+    {
         this.uid = uid;
         this.name = name;
         this.major = major;
@@ -44,16 +49,16 @@ public class User {
     public String getAbroadCountry(){
         return abroadCountry;
     }
-    public ArrayList<String> getCourses(){
+    public DocumentReference getCourses(){
         return courses;
     }
-    public ArrayList<String> getInternship(){
+    public DocumentReference getInternship(){
         return internship;
     }
     public boolean getStudyAborad(){
         return studyAbroad;
     }
-    public ArrayList<String> getClubs(){
+    public DocumentReference getClubs(){
         return clubs;
     }
     public String getId(){
