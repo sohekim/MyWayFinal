@@ -38,17 +38,21 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
+        signIn = (Button) findViewById(R.id.buttonSignIn);
+
         signIn.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(this);
 
+        signIn.setOnClickListener(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        if(firebaseAuth.getCurrentUser()!=null){
+       // if(firebaseAuth.getCurrentUser()!=null){
             //profile activity
-            finish();
-            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
-        }
+        //    finish();
+        //    startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+
+       // }
 
     }
 
@@ -83,8 +87,12 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
                if(task.isSuccessful()){
                    //start profile activity
-                   finish();
-                   startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                   //finish();
+                   Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
+                   startActivity(i);
+               }
+               else{
+                   Toast.makeText(LogInActivity.this, "Could not sign in, please try again", Toast.LENGTH_SHORT).show();
                }
            }
        });
