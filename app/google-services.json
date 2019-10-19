@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "224229145131",
+    "firebase_url": "https://causal-scarab-243307.firebaseio.com",
+    "project_id": "causal-scarab-243307",
+    "storage_bucket": "causal-scarab-243307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224229145131:android:88e45718f0943432b2886e",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224229145131-s1os9mhmp159pemu8cphhboihhfb39ne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJO3IF1rIaDSq8oeaQtJw_hI4u1HROSFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224229145131-s1os9mhmp159pemu8cphhboihhfb39ne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
