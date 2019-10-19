@@ -51,17 +51,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     public void onClick(View view){
+
         if(view== buttonRegister){
             registerUser();
         }
         if(view== textViewSignin){
             //log in here
-            finish();
-            startActivity(new Intent(this,LogInActivity.class));
+            //finish();
+            Intent i = new Intent(MainActivity.this,LogInActivity.class);
+            startActivity(i);
         }
     }
     private void registerUser(){
-        String email = editTextEmail.getText().toString().trim();
+        final String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
         if(email.isEmpty()){
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                progressDialog.dismiss();
                 if(task.isSuccessful()){
                     //you are registered and log in
                     //start profile activity here
