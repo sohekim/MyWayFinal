@@ -14,11 +14,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.Serializable;
 
-public class ProfileActivity extends AppCompatActivity
-        //implements View.OnClickListener {
-{
+public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     User user;
+    private Button edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,19 @@ public class ProfileActivity extends AppCompatActivity
 
         user = (User) getIntent().getSerializableExtra("USER");
 
+        edit = (Button) findViewById(R.id.editProfile);
+
+        edit.setOnClickListener(this);
         //TextView nameField = findViewById(R.id.userProfile);
         //nameField.setText(user.getName());
     }
 
 
-    //@Override
-    //public void onClick(View v) {
-
-    //}
+    @Override
+    public void onClick(View v) {
+        if(v == edit){
+            Intent i = new Intent(ProfileActivity.this,EditProfileActivity.class);
+            startActivity(i);
+        }
+    }
 }

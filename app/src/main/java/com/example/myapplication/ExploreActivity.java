@@ -58,7 +58,7 @@ public class ExploreActivity extends AppCompatActivity {
                                     querySnapshot.getDocumentReference("courses"),
                                     //querySnapshot.getBoolean("studyAbroad"),
                                     //querySnapshot.getString("abroadCountries"),
-                                    querySnapshot.getDocumentReference("internships"),
+                                    querySnapshot.getDocumentReference("internship"),
                                     querySnapshot.getDocumentReference("clubs"));
 
 
