@@ -19,7 +19,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     ExploreActivity exploreActivity;
     ArrayList<User> userArrayList;
-    int curPosition;
 
     public RecyclerViewAdapter(ExploreActivity exploreActivity, ArrayList<User> userArrayList) {
         this.exploreActivity = exploreActivity;
@@ -35,15 +34,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        curPosition = position;
+    public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
         holder.mUserName.setText(userArrayList.get(position).getName());
         holder.mUserMajor.setText(userArrayList.get(position).getMajor());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecyclerViewAdapter.this.exploreActivity, ProfileActivity.class);
-                intent.putExtra("USER", userArrayList.get(curPosition));
+                intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                intent.putExtra("USER", userArrayList.get(position));
                 exploreActivity.startActivity(intent);
             }
 

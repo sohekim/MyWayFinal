@@ -78,9 +78,8 @@ public class ExploreActivity extends AppCompatActivity {
 
     private void addUserDataToFirebase(){
 
-        Random random = new Random();
+            Random random = new Random();
 
-        for(int i = 0; i < 3; i++){
             DocumentReference ref = db.collection("users").document();
 
             Map<String, Object> classes = new HashMap<>();
@@ -106,8 +105,8 @@ public class ExploreActivity extends AppCompatActivity {
 
             Map<String, Object> dataMap = new HashMap<>();
 
-            dataMap.put("name", "try name"+random.nextInt(50));
-            dataMap.put("status", "try status"+random.nextInt(50));
+            dataMap.put("name", random.nextInt()+"");
+            dataMap.put("major", "Computer Science");
             dataMap.put("studyAbroad", true);
             dataMap.put("abroadCountries", "Hungary");
 
@@ -117,8 +116,6 @@ public class ExploreActivity extends AppCompatActivity {
             ref.collection("internships").document().set(internship);
             ref.collection("clubs").document().set(club);
 
-
-        }
     }
 
     private void setUpFirebase(){
