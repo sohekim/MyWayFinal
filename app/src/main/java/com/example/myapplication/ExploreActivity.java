@@ -2,11 +2,15 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.myapplication.adapterAndView.RecyclerViewAdapter;
@@ -14,6 +18,10 @@ import com.example.myapplication.data.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -30,6 +38,9 @@ public class ExploreActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     ArrayList<User> profileArrayList;
     RecyclerViewAdapter adapter;
+
+    private BottomNavigationView mNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +52,39 @@ public class ExploreActivity extends AppCompatActivity {
         setUpFirebase();
         addUserDataToFirebase();
         loadData();
+        mNavigationView = findViewById(R.id.navigationView);
+
+        mNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Intent intent = getIntent();
+
+                    // mDrawer.closeDrawer(GravityCompat.START);
+                    switch (menuItem.getItemId()) {
+                        case R.id.navigation_explore: {
+
+                        }
+                        break;
+                        case R.id.navigation_feed: {
+                            intent.setClass(ExploreActivity.this, FeedActivity.class);
+                            startActivity(intent);
+                        }
+                        break;
+                        case R.id.userPage: {
+                            intent.setClass(ExploreActivity.this, ExploreActivity.class);
+                            startActivity(intent);
+                        }
+                        break;
+
+                    }
+                    return true;
+                }
+        });
+
+
+
     }
+
 
     private void loadData(){
         db.collection("users")
@@ -127,4 +170,5 @@ public class ExploreActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
 }

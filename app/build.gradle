@@ -37,7 +37,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.2.0'
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"
-
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
