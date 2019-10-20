@@ -14,7 +14,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.Serializable;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+public class ProfileActivity extends AppCompatActivity
+        //implements View.OnClickListener {
+{
 
     User user;
 
@@ -25,13 +27,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         user = (User) getIntent().getSerializableExtra("USER");
 
-        TextView nameField = findViewById(R.id.userProfile);
-        nameField.setText(user.getName());
+        //TextView nameField = findViewById(R.id.userProfile);
+        //nameField.setText(user.getName());
     }
 
 
-    @Override
-    public void onClick(View v) {
+    //@Override
+    //public void onClick(View v) {
 
-    }
+    //}
 }
