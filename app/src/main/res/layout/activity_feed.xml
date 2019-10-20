@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FeedActivity">
+
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/soheeFeed"
@@ -14,7 +15,177 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/feedTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:text="Feed"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/bQ"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:text="Ask a Question" />
+
+        <TextView
+            android:id="@+id/date1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="280dp"
+            android:text="2019/09/21" />
+
+
+        <TextView
+
+            android:id="@+id/q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:text="Hey Everyone! I am a Sophomore at Amherst College. I am stuck between choosing one of two courses: Number Theory or Discrete Mathematics, as a CS major I am required to take one of the two courses. Can someone help me decide?"
+            android:textColor="#000"
+
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginRight="20dp"
+            android:text="Reply: 3  | Like:  2" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="___________________________________________________________" />
+
+        <TextView
+            android:id="@+id/date2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="280dp"
+            android:layout_marginTop="15dp"
+            android:text="2019/09/01" />
+
+        <TextView
+            android:id="@+id/q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:text="Hi! My name is Sohee. I am a junior at Mount Holyoke College majoring in Chemistry. I want to take a Philosophy course this Spring, but I am not sure about which cousre I should take. I know I am intrested in Existential Philosophy, but there a range of courses that bring up this topic. Can someone reccommend which course to take and what they got out from it. Thanks!"
+            android:textColor="#000"
+
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginRight="20dp"
+            android:text="Reply: 9  | Like:  8" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="___________________________________________________________" />
+
+        <TextView
+            android:id="@+id/date3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="280dp"
+            android:layout_marginTop="15dp"
+            android:text="2019/08/07" />
+
+
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:text="What's up everyone! I am a Sophomore at Davidson College, my intended major is English Literature. I wanted to ask for a rating of Professor Carrot, he teaches the introductory course for the major. Thanks!"
+            android:textColor="#000"
+
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginRight="20dp"
+            android:text="Reply: 3  | Like:  2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="___________________________________________________________" />
+
+
+        <TextView
+            android:id="@+id/date4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="280dp"
+            android:layout_marginTop="15dp"
+            android:text="2019/09/19" />
+
+        <TextView
+            android:id="@+id/q4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:text="Hey y'all. My name is Annie. I am a first-year student at Umass. I wanted to ask if as a first-year student am I allowed to study abroad?"
+            android:textColor="#000"
+
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/r4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginRight="20dp"
+            android:text="Reply: 5  | Like:  3" />
+
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

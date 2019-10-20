@@ -7,16 +7,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+
+import android.view.View;
+import android.widget.Button;
+
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FeedActivity extends AppCompatActivity {
 
     private BottomNavigationView mNavigationView;
+    private Button buttonQuestion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
+
+        buttonQuestion = findViewById(R.id.bQ);
+
+        buttonQuestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToAsk();
+            }
+        });
 
         mNavigationView = findViewById(R.id.navigationView);
 
@@ -46,5 +61,13 @@ public class FeedActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+    }
+
+    public void moveToAsk() {
+        Intent intent = new Intent (this, Ask.class);
+        startActivity(intent);
+
     }
 }

@@ -35,8 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
-        holder.mUserName.setText(userArrayList.get(position).getName());
-        holder.mUserMajor.setText(userArrayList.get(position).getMajor());
+        holder.mUserName.setText(userArrayList.get(position).Name());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

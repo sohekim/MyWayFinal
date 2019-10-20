@@ -91,7 +91,7 @@ public class ExploreActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         for(DocumentSnapshot querySnapshot: task.getResult()){
                             User user = new User(
-                                    querySnapshot.getString("email"),
+
                                     querySnapshot.getId(),
                                     querySnapshot.getString("name"),
                                     querySnapshot.getString("major"),

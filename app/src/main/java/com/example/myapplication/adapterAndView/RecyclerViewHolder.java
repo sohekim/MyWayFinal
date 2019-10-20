@@ -15,8 +15,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
     public RecyclerViewHolder(View itemView){
          super(itemView);
          mUserName = itemView.findViewById(R.id.userName);
-         mUserMajor = itemView.findViewById(R.id.userMajor);
-         mDeleteButton = itemView.findViewById(R.id.deleteButton);
+//         mUserMajor = itemView.findViewById(R.id.userMajor);
 
     }
 

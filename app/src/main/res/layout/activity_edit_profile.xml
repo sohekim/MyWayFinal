@@ -16,235 +16,240 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22000003">
 
-
-        <ImageView
-
-            android:id="@+id/UserPhoto"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher_background" />
 
         <EditText
-            android:inputType="textNoSuggestions"
             android:id="@+id/editName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="User Name"
-            android:textSize="30dp"
-            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="5dp"
             android:fontFamily="sans-serif-light"
-            android:layout_marginTop="5dp"/>
+            android:inputType="textNoSuggestions"
+            android:text="User Name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp" />
 
-        <Button
-            android:id="@+id/saveProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Save" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="30dp"
-            android:orientation="vertical"
 
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="sans-serif-black"
                 android:text="Email: "
-                android:textSize="15dp"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/editEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="edit email"
-                android:textSize="18sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"/>
+                android:textSize="18dp" />
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:background="@color/colorPrimary" />-->
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
                 android:text="Password "
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
             <EditText
-                android:inputType="textNoSuggestions"
                 android:id="@+id/editTextPassword"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
                 android:text="Edit Password"
                 android:textSize="18sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"/>
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:background="@color/colorPrimary" />-->
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp">
+
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
                 android:text="Major: "
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
             <EditText
-                android:inputType="textNoSuggestions"
                 android:id="@+id/editMajor"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
                 android:text="edit major"
-                android:textSize="18sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"/>
+                android:textSize="18dp" />
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:background="@color/colorPrimary" />-->
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="sans-serif-black"
                 android:text="Classes "
-                android:textSize="15dp"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
 
             <EditText
-                android:inputType="textNoSuggestions"
                 android:id="@+id/editClasses"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
                 android:text="Edit Classes"
-                android:textSize="18sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"/>
+                android:textSize="18dp" />
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:background="@color/colorPrimary" />-->
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
                 android:text="Internships: "
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
             <EditText
-                android:inputType="textNoSuggestions"
                 android:id="@+id/editInternship"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Edit Internship"
-                android:textSize="18sp" />
-            <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"/>
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:text="Edit Internship"
+                android:textSize="18dp" />
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:background="@color/colorPrimary" />-->
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="sans-serif-black"
                 android:text="Clubs "
-                android:textSize="15dp"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
 
             <EditText
-                android:inputType="textNoSuggestions"
                 android:id="@+id/editClubs"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
                 android:text="Edit Clubs"
-                android:textSize="18sp" />
+                android:textSize="18dp" />
         </LinearLayout>
 
 
     </LinearLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        app:layout_constraintBottom_toTopOf="@id/root"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--tools:context="com.chikeandroid.bottomnavigationdemo.MainActivity">-->
 
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65">
+        <!--tools:context="com.chikeandroid.bottomnavigationdemo.MainActivity">-->
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigationView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
             android:layout_marginStart="0dp"
-            app:labelVisibilityMode="labeled"
+            android:layout_marginEnd="0dp"
             android:background="?android:attr/windowBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             app:itemBackground="@color/colorPrimary"
             app:itemIconTint="#ffffff"
             app:itemTextColor="#ffffff"
-            app:menu="@menu/navigation"/>
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
+
+        <Button
+            android:id="@+id/saveProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Save"
+            app:layout_constraintBottom_toTopOf="@+id/navigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.77" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,17 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.myapplication.data.User;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
-import java.io.Serializable;
-import java.util.Random;
-
 
 
 public class ProfileActivity extends AppCompatActivity{
@@ -45,8 +38,19 @@ public class ProfileActivity extends AppCompatActivity{
 
     private void processExtraData(){
         User user = (User) getIntent().getSerializableExtra("USER");
-        TextView nameField = findViewById(R.id.userProfile);
-        nameField.setText(user.getName());
+
+//        TextView majorField = findViewById(R.id.profileMajor);
+//        majorField.setText(user.getMajor());
+
+        TextView studyField = findViewById(R.id.profileStudyAbroad);
+        if (user.getStudyAborad()) {
+            studyField.setText(user.getAbroadCountry());
+        } else {
+            studyField.setText("no");
+        }
+
+        TextView nameField = findViewById(R.id.userName);
+        nameField.setText(user.Name());
 
     }
 }

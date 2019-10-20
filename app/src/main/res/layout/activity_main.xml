@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -17,12 +18,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:layout_margin="15dp"
-            android:inputType="textEmailAddress"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:hint="Enter your email"
-            android:id = "@+id/editTextEmail"/>
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -33,16 +34,28 @@
             android:inputType="textPassword" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/buttonRegister"
-            android:text="Register User"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:text="Register User" />
+
+        <TextView
+            android:id="@+id/textViewSignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Already register? Sign in here"
-            android:id="@+id/textViewSignin" />
+            android:textAlignment="center" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="134dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

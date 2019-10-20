@@ -8,36 +8,28 @@
 
 
     <LinearLayout
-        android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39">
 
-
-        <ImageView
-
-            android:id="@+id/UserPhoto"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/userProfile"
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="User Name"
-            android:textSize="32sp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Name"
             android:textColor="@color/colorPrimary"
-            android:fontFamily="sans-serif-light"
-            android:layout_marginTop="15dp"/>
+            android:textSize="32sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +37,6 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="30dp"
-            android:orientation="vertical"
 
             >
 
@@ -53,128 +44,166 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="Email: "
-                android:textSize="20dp"
-                android:textColor="@color/colorPrimary"/>
+                android:text="Major: "
+                android:textColor="#A4C2F4"
+                android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/profileEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="user email here"
-                android:textSize="18sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/colorPrimary"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-           <TextView
-
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Major: "
-               android:textSize="20dp"
-               android:fontFamily="sans-serif-light"/>
             <TextView
                 android:id="@+id/profileMajor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="user major here"
                 android:textSize="18sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/colorPrimary"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/profileSkills"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Skills: "
-                android:textSize="20dp"
-                android:fontFamily="sans-serif-light"/>
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+
+            >
+
             <TextView
-                android:id="@+id/profileClasses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Classes: "
-                android:textSize="20dp"
-                android:fontFamily="sans-serif-light"/>
+                android:fontFamily="sans-serif-light"
+                android:text="Class: "
+                android:textColor="#A4C2F4"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/profileClass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="user class here"
+                android:textSize="18sp" />
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Courses: "
+                android:textColor="#A4C2F4"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/profileCourses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="user courses here"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Clubs: "
+                android:textColor="#A4C2F4"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/profileClubs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="user clubs here"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Study Abroad: "
+                android:textColor="#A4C2F4"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/profileStudyAbroad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="user study abroad here"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Internships: "
+                android:textColor="#A4C2F4"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/profileIntern"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="user internships here"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
             <Button
-                android:id="@+id/buttonLogout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Logout" />
-
-            <Button
                 android:id="@+id/editProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Edit" />
+                android:layout_marginRight="30dp"
+                android:text="Message" />
 
         </RelativeLayout>
 
     </LinearLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        app:layout_constraintBottom_toTopOf="@id/rootLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--tools:context="com.chikeandroid.bottomnavigationdemo.MainActivity">-->
-
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navigationView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            app:labelVisibilityMode="labeled"
-            android:background="?android:attr/windowBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:itemBackground="@color/colorPrimary"
-            app:itemIconTint="#ffffff"
-            app:itemTextColor="#ffffff"
-            app:menu="@menu/navigation"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
