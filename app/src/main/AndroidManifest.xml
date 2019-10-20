@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,17 +15,20 @@
         android:theme="@style/AppTheme">
         <activity android:name=".FeedActivity"></activity>
         <activity android:name=".ExploreActivity">
+
+        </activity>
+        <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".EditProfileActivity">
-        </activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".MainActivity">
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
 
         </activity>
     </application>

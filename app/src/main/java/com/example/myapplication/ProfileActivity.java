@@ -15,10 +15,13 @@ import com.google.firebase.auth.FirebaseUser;
 import java.io.Serializable;
 import java.util.Random;
 
-public class ProfileActivity extends AppCompatActivity {
+
+
+public class ProfileActivity extends AppCompatActivity{
 
 
     User user;
+    private Button edit;
 
 
     @Override
@@ -26,6 +29,11 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         processExtraData();
+
+        user = (User) getIntent().getSerializableExtra("USER");
+
+        edit = (Button) findViewById(R.id.editProfile);
+
     }
 
     @Override
@@ -39,5 +47,6 @@ public class ProfileActivity extends AppCompatActivity {
         User user = (User) getIntent().getSerializableExtra("USER");
         TextView nameField = findViewById(R.id.userProfile);
         nameField.setText(user.getName());
+
     }
 }

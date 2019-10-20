@@ -16,19 +16,18 @@ public class User implements Serializable{
     private String email;
 
     private DocumentReference courses;
-   // private boolean studyAbroad;
-   // private String abroadCountry;
+
     private DocumentReference internships;
     private DocumentReference clubs;
 
+
+
     public User(
-            String email,
             String uid,
             String name,
+            String email,
             String major,
             DocumentReference courses,
-//            boolean studyAbroad,
-//            String abroadCountry,
             DocumentReference internships,
             DocumentReference clubs
     )
@@ -42,22 +41,27 @@ public class User implements Serializable{
         this.clubs = clubs;
        // this.studyAbroad = studyAbroad;
         this.internships = internships;
+
         this.email =email;
     }
 
+    public String getId(){
+        return uid;
+    }
     public String getName(){
         return name;
-    }
-    public String getMajor(){
-        return major;
     }
     public String getEmail(){
         return email;
     }
+    public String getMajor(){
+        return major;
+    }
 
-   // public String getAbroadCountry(){
-   //     return abroadCountry;
-   // }
+
+  // public String getAbroadCountry(){
+  //      return abroadCountry;
+  //  }
     public DocumentReference getCourses(){
         return courses;
     }
@@ -65,14 +69,11 @@ public class User implements Serializable{
         return internships;
     }
 
-    //public boolean getStudyAborad(){
-      //  return studyAbroad;
-    //}
+   // public boolean getStudyAborad(){
+   //     return studyAbroad;}
     public DocumentReference getClubs(){
         return clubs;
     }
-    public String getId(){
-        return uid;
-    }
+
 
 }
