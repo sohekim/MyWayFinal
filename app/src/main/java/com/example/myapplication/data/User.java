@@ -10,22 +10,26 @@ import java.util.ArrayList;
 public class User implements Serializable{
 
     private String uid;
+
     private String name;
     private String major;
+    private String email;
+
     private DocumentReference courses;
-    private boolean studyAbroad;
-    private String abroadCountry;
-    private DocumentReference internship;
+   // private boolean studyAbroad;
+   // private String abroadCountry;
+    private DocumentReference internships;
     private DocumentReference clubs;
 
     public User(
+            String email,
             String uid,
             String name,
             String major,
             DocumentReference courses,
-            boolean studyAbroad,
-            String abroadCountry,
-            DocumentReference internship,
+//            boolean studyAbroad,
+//            String abroadCountry,
+            DocumentReference internships,
             DocumentReference clubs
     )
 
@@ -34,10 +38,11 @@ public class User implements Serializable{
         this.name = name;
         this.major = major;
         this.courses = courses;
-        this.abroadCountry = abroadCountry;
+        //this.abroadCountry = abroadCountry;
         this.clubs = clubs;
-        this.studyAbroad = studyAbroad;
-        this.internship = internship;
+       // this.studyAbroad = studyAbroad;
+        this.internships = internships;
+        this.email =email;
     }
 
     public String getName(){
@@ -46,22 +51,28 @@ public class User implements Serializable{
     public String getMajor(){
         return major;
     }
-    public String getAbroadCountry(){
-        return abroadCountry;
+    public String getEmail(){
+        return email;
     }
+
+   // public String getAbroadCountry(){
+   //     return abroadCountry;
+   // }
     public DocumentReference getCourses(){
         return courses;
     }
     public DocumentReference getInternship(){
-        return internship;
+        return internships;
     }
-    public boolean getStudyAborad(){
-        return studyAbroad;
-    }
+
+    //public boolean getStudyAborad(){
+      //  return studyAbroad;
+    //}
     public DocumentReference getClubs(){
         return clubs;
     }
     public String getId(){
         return uid;
     }
+
 }

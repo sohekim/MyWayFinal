@@ -26,7 +26,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     private EditText editTextEmail;
     private  EditText editTextPassword;
 
-    private ProgressDialog progressDialog;
+    //private ProgressDialog progressDialog;
 
     private FirebaseAuth firebaseAuth;
 
@@ -42,7 +42,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
         signIn.setOnClickListener(this);
 
-        progressDialog = new ProgressDialog(this);
+        //progressDialog = new ProgressDialog(this);
 
         signIn.setOnClickListener(this);
 
@@ -77,13 +77,13 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         }
         //if valid
         //first we show progress dialogue
-        progressDialog.setMessage("Logging in ...");
-        progressDialog.show();
+        //progressDialog.setMessage("Logging in ...");
+        //progressDialog.show();
 
        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
            @Override
            public void onComplete(@NonNull Task<AuthResult> task) {
-               progressDialog.dismiss();
+               //progressDialog.dismiss();
 
                if(task.isSuccessful()){
                    //start profile activity

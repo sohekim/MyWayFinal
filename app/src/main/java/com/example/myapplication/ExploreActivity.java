@@ -71,7 +71,7 @@ public class ExploreActivity extends AppCompatActivity {
                         }
                         break;
                         case R.id.userPage: {
-                            intent.setClass(ExploreActivity.this, ExploreActivity.class);
+                            intent.setClass(ExploreActivity.this, EditProfileActivity.class);
                             startActivity(intent);
                         }
                         break;
@@ -80,9 +80,6 @@ public class ExploreActivity extends AppCompatActivity {
                     return true;
                 }
         });
-
-
-
     }
 
 
@@ -94,12 +91,11 @@ public class ExploreActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         for(DocumentSnapshot querySnapshot: task.getResult()){
                             User user = new User(
+                                    querySnapshot.getString("email"),
                                     querySnapshot.getId(),
                                     querySnapshot.getString("name"),
                                     querySnapshot.getString("major"),
                                     querySnapshot.getDocumentReference("courses"),
-                                    querySnapshot.getBoolean("studyAbroad"),
-                                    querySnapshot.getString("abroadCountries"),
                                     querySnapshot.getDocumentReference("internships"),
                                     querySnapshot.getDocumentReference("clubs"));
 
@@ -150,8 +146,8 @@ public class ExploreActivity extends AppCompatActivity {
 
             dataMap.put("name", random.nextInt()+"");
             dataMap.put("major", "Computer Science");
-            dataMap.put("studyAbroad", true);
-            dataMap.put("abroadCountries", "Hungary");
+            //dataMap.put("studyAbroad", true);
+            //dataMap.put("abroadCountries", "Hungary");
 
 
             ref.set(dataMap);

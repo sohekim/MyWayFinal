@@ -17,6 +17,10 @@ import java.util.Random;
 
 public class ProfileActivity extends AppCompatActivity {
 
+
+    User user;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,4 @@ public class ProfileActivity extends AppCompatActivity {
         TextView nameField = findViewById(R.id.userProfile);
         nameField.setText(user.getName());
     }
-
-
 }
