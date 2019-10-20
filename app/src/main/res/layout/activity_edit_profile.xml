@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+
+            android:id="@+id/UserPhoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:inputType="textNoSuggestions"
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="User Name"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/saveProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Save" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Email: "
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="edit email"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password "
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:inputType="textNoSuggestions"
+                android:id="@+id/editTextPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Password"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Major: "
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:inputType="textNoSuggestions"
+                android:id="@+id/editMajor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="edit major"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Classes "
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:inputType="textNoSuggestions"
+                android:id="@+id/editClasses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Classes"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Internships: "
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:inputType="textNoSuggestions"
+                android:id="@+id/editInternship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Internship"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Clubs "
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:inputType="textNoSuggestions"
+                android:id="@+id/editClubs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Clubs"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,10 +53,11 @@ public class ExploreActivity extends AppCompatActivity {
                             User user = new User(
                                     querySnapshot.getId(),
                                     querySnapshot.getString("name"),
+                                    querySnapshot.getString("email"),
                                     querySnapshot.getString("major"),
                                     querySnapshot.getDocumentReference("courses"),
-                                    querySnapshot.getBoolean("studyAbroad"),
-                                    querySnapshot.getString("abroadCountries"),
+                                    //querySnapshot.getBoolean("studyAbroad"),
+                                    //querySnapshot.getString("abroadCountries"),
                                     querySnapshot.getDocumentReference("internships"),
                                     querySnapshot.getDocumentReference("clubs"));
 
